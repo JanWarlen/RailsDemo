@@ -1,0 +1,14 @@
+<nav class="navbar bg-dark navbar-bark">
+  <a class="navbar-brand" href="/"><%= ApplicationHelper::APP_NAME %></a>
+
+  <% if user_signed_in? %>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <%= link_to "个人信息编辑", edit_user_registration_path, class: "nav-link text-secondary" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "退出", destroy_user_session_path, method: :delete, class: "nav-link text-secondary" %>
+      </li>
+    </ul>
+  <% end %>
+</nav>

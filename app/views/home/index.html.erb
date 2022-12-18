@@ -1,0 +1,16 @@
+<h1>Hello World! <%= @user.name %></h1>
+
+<div class="col-md-3">
+  <div class="card p-2">
+    <% unless current_user.avatar.nil? %>
+    <%=  image_tag current_user.avatar.variant(resize: "128x128!"), class: "rounded-circle m-4"  %>
+    <% end %>
+    <%#= image_tag current_user.avatar.url, class: 'card-img-top rounded-circle' %>
+    <div class="card-body">
+      <h4 class="card-tittle"><%= "@#{@user.name}" %></h4>
+      <p class="card-text">
+        <span class="text-secondary">用户信息</span>
+      </p>
+    </div>
+  </div>
+</div>
