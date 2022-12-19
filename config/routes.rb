@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   mount Sidekiq::Web, at: '/sidekiq'
+
+  resources :posts, only: [:create]
 end
