@@ -13,6 +13,8 @@ class User < ApplicationRecord
   validates_format_of :name, with: /^[a-zA-Z0-9_¥.]*$/, multiline: true
   validate :validate_name
 
+  has_many :posts, inverse_of: :user
+
   def validate_name
     errors.add(:name, :invalid) if User.where(email: name).exists?
   end
