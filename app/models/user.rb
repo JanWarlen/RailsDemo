@@ -39,4 +39,8 @@ class User < ApplicationRecord
        { value: login.downcase }]
     ).first
   end
+
+  def created_month
+    created_at.strftime('%Y年%m月')
+  end
 end

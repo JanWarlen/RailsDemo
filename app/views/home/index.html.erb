@@ -10,7 +10,8 @@
       <div class="card-body">
         <h4 class="card-tittle"><%= "@#{@user.name}" %></h4>
         <p class="card-text">
-          <span class="text-secondary">用户信息</span>
+          <span class="text-secondary"><%= "#{@user.created_month} login" %></span> <br/>
+          <span class="text-secondary"><%= "#{@user.posts_count} posts" %></span>
         </p>
       </div>
     </div>

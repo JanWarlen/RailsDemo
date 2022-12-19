@@ -75,3 +75,5 @@ gem "image_processing", ">= 1.2"
 
 # 分页
 gem 'kaminari'
+
+gem 'counter_culture'
