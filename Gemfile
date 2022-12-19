@@ -72,3 +72,6 @@ gem 'sinatra'
 
 # 图片上传
 gem "image_processing", ">= 1.2"
+
+# 分页
+gem 'kaminari'
